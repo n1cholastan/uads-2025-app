@@ -5,8 +5,56 @@
   --color-cream: oklch(0.96 0.0237 88.23);
   --color-brown: oklch(0.36 0.0832 51.78);
   --color-yellow: oklch(0.76 0.1433 68.19);
+  --color-gray: oklch(0.92 0.0307 61.1);
   --font-inter: "Inter", "sans-serif";
   --font-title: "Shrikhand", "serif";
   --font-body: "Arvo", "serif";
 
 }
+
+@layer utilities {
+  @keyframes sway {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  .animate-sway {
+    animation: sway 2s ease-in-out infinite;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+
+  @keyframes scroll-x {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-x {
+    animation: scroll-x var(--marquee-speed, 30s) linear infinite;
+  }
+
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+}
+
