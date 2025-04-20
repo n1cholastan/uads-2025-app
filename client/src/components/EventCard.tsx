@@ -46,10 +46,10 @@ function hasPassed(eventDateTime: string): boolean {
         {/* Right side content */}
         <div className="w-2/3 flex flex-col items-start justify-between py-2 pr-2 relative">
           <div>
-            <p className="text-sm font-medium opacity-90">{formattedDateTime}</p>
-            <h2 className="text-xl font-bold leading-tight">{title}</h2>
-            <p className="text-md font-semibold opacity-90">{location}</p>
-            <p className="text-sm opacity-90 line-clamp-3">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-medium opacity-90">{formattedDateTime}</p>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight">{title}</h2>
+            <p className="text-sm sm:text-md md:-text-lg lg:text-xl font-semibold opacity-90 mb-2 sm:mb-4 md:mb-6">{location}</p>
+            <p className="text-xs sm:text-sm md:text-base opacity-90 line-clamp-2 sm:line-clamp-3">
                 {isPast && (
                     <span className="font-semibold text-red block">
                     Event Passed
@@ -62,7 +62,7 @@ function hasPassed(eventDateTime: string): boolean {
           {/* Read More Button */}
           <NavLink
             to={`/events/${props.id}`}
-            className="absolute bottom-2 right-2 text-sm px-3 py-1 rounded-full font-bold bg-cream text-red hover:opacity-90  transition-all duration-200"
+            className="absolute bottom-2 right-2 text-sm px-3 py-1 md:px-5 md:py-2 lg:px-10 md:text-base xl:text-lg rounded-full font-bold bg-cream text-red hover:opacity-90  transition-all duration-200"
             >
             Read More
             </NavLink>
