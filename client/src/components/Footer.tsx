@@ -3,13 +3,12 @@ import { SiLinktree, SiInstagram, SiTiktok, SiGmail, SiDiscord, SiFacebook } fro
 function Footer() {
     return (
         <div className="bg-red w-screen text-cream flex flex-col gap-10 items-center min-h-1/4 max-h-screen">
-            <div className="flex flex-col md:flex-row gap-10 pr-4 w-fit self-center items-center mt-8">
+            <div className="flex flex-col md:flex-row gap-10 w-fit self-center items-center mt-8">
 
                 <NavLink
                     to="/sponsors"
                     className="font-body font-bold text-2xl md:text-xl hover:text-yellow transition-colors duration-300 ease-in-out"
-                >
-                    Sponsors
+                >Sponsors
                 </NavLink>
 
 
@@ -30,8 +29,7 @@ function Footer() {
                 <NavLink
                     to="/join"
                     className="font-body font-bold text-2xl md:text-xl hover:text-yellow transition-colors duration-300 ease-in-out"
-                >
-                    Join Us
+                >Join Us
                 </NavLink>
                 
             
