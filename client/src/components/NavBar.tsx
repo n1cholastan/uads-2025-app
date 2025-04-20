@@ -11,7 +11,7 @@ function NavBar() {
     <div className="sticky top-0 z-50 w-screen">
       {/* Navbar container */}
       <div
-        className={`navbar-container bg-cream my-3 mx-8 md:my-4 md:mx-4 p-2 text-black rounded-4xl md:rounded-full border-red border-2 md:border-4 ${isOpen ? 'open' : ''}`}
+        className={`navbar-container bg-cream my-3 mx-8 md:my-4 md:mx-4 p-2 rounded-4xl md:rounded-full border-red border-2 md:border-4 ${isOpen ? 'open' : ''}`}
 
       >
         <div className="flex flex-row items-center justify-between h-12 sm:h-16 md:h-20">
