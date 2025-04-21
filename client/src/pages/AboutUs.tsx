@@ -6,7 +6,7 @@ import {mockExecs} from"../mockExecs";
 
 function AboutUs() {
     return (
-        <div className="mb-10">
+        <div className="mb-20">
         <div className="text-center my-8 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80"> 
                 <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">About Us</p>
             </div>

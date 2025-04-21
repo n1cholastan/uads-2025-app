@@ -140,7 +140,7 @@ function Home() {
         <StarSeparator />
 
         {/* Sponsors Section */}
-        <div className="flex flex-col items-center mb-10">
+        <div className="flex flex-col items-center mb-20">
           <div className="text-center my-2 md:my-10 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80"> 
               <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">2025 Sponsors</p>   
           </div>
