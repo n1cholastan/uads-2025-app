@@ -12,3 +12,13 @@ export interface EventCardProps {
     description: string;
     imageSrc: string;
   }
+
+  export interface SponsorCardProps {
+    id: string;
+    name: string;
+    location: string;
+    isDeal: boolean;
+    deal: string;
+    imageSrc: string;
+    link: string;
+  }
