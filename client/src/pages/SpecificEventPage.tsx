@@ -34,7 +34,7 @@ function SpecificEventPage() {
 
   return (
     <div className="flex flex-col justify-center">
-        <div className="text-center my-2 md:my-10 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80"> 
+        <div className="text-center my-8 md:my-10 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80"> 
                 <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">Events</p>
                 <NavButton
           linkto="/events"
