@@ -7,8 +7,8 @@ import temp5 from "../assets/IMG_4010.png";
 import temp6 from "../assets/IMG_3932.png";
 import NavButton from "../components/NavButton";
 import StarSeparator from "../components/StarSeparator";
-import post from "../assets/dessert crawl post.png";
 import EventCard from "../components/EventCard";
+import { mockEvents } from "../mockEvents";
 import { SiLinktree, SiInstagram, SiTiktok, SiGmail, SiDiscord, SiFacebook } from "react-icons/si";
 
 import lanoissette from "../assets/sponsor images/lanoissette.png";
@@ -26,25 +26,14 @@ import fugitoto from "../assets/sponsor images/fugitoto.png";
 import uncletetsus from "../assets/sponsor images/uncle_tetsus.png";
 
 function Home() {
+
+  const firstEvent = mockEvents[0];
+  const sponsors1 = [theshelf, lanoissette, kompass, lapetit, thatsandoguy, tsujiri]
+  const sponsors2 = [yoguyogu, gongcha, giapo, teadee, copain, uncletetsus, fugitoto ]
     return (
-        <div className="bg-cream w-screen text-black py-4 flex flex-col items-center">
-          <StartingSection />
-          <ImageSection />
-          <AboutSection />
-          <StarSeparator />
-          <NextEventsSection />
-          <StarSeparator />
-          <SponsorSection />
-
-        </div>
-    )
-
-}
-
-
-function StartingSection() {
-    return (
-        <div className=" mx-5 mb-10">
+        <div className="bg-cream w-screen py-4 flex flex-col items-center">
+        {/*Welcome Screen*/}
+          <div className=" mx-5 mb-10">
             <div className="mt-20 flex flex-col gap-4 items-center">
                 <img src={sal} className="w-1/4 m-auto animate-sway"></img>
                 <p className="text-5xl font-title text-red text-center">UADS</p>
@@ -84,49 +73,41 @@ function StartingSection() {
             </div>
             
         </div>
-    )
-    
-}
 
-function ImageSection() {
-    return (
+        {/*Images*/}
         <div className="mx-3 md:mx-8 my-8 lg:mx-32 xl:mx-56 grid grid-cols-3 gap-2 sm:gap-4 p-4 bg-cream">
-        {/* Column 1 */}
-        <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
-            <img src={temp} alt="Dessert" className="w-full h-full object-cover" />
+          {/* Column 1 */}
+          <div className="flex flex-col gap-2 sm:gap-4">
+            <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
+              <img src={temp} alt="Dessert" className="w-full h-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
+              <img src={temp6} alt="Dessert Flatlay" className="w-full h-full object-cover" />
+            </div>
           </div>
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
-            <img src={temp6} alt="Dessert Flatlay" className="w-full h-full object-cover" />
+        
+          {/* Column 2 */}
+          <div className="flex flex-col gap-2 sm:gap-4">
+            <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
+              <img src={temp2} alt="Bubble Tea" className="w-full h-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
+              <img src={temp4} alt="Ice Cream" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        
+          {/* Column 3 */}
+          <div className="flex flex-col gap-2 sm:gap-4">
+            <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
+              <img src={temp5} alt="Dessert" className="w-full h-full object-cover" />
+            </div>
+            <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
+              <img src={temp3} alt="Dessert Flatlay" className="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
-      
-        {/* Column 2 */}
-        <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
-            <img src={temp2} alt="Bubble Tea" className="w-full h-full object-cover" />
-          </div>
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
-            <img src={temp4} alt="Ice Cream" className="w-full h-full object-cover" />
-          </div>
-        </div>
-      
-        {/* Column 3 */}
-        <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
-            <img src={temp5} alt="Dessert" className="w-full h-full object-cover" />
-          </div>
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
-            <img src={temp3} alt="Dessert Flatlay" className="w-full h-full object-cover" />
-          </div>
-        </div>
-      </div>
-      
-    )
-}
 
-function AboutSection() {
-    return (
+        {/*About Section*/}
         <div className="text-center my-2 md:my-10 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80"> 
             <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">What is UADS?</p>
             <p className="font-body text-brown text-base md:text-xl mb-6">
@@ -139,78 +120,68 @@ function AboutSection() {
                     </p>
             <NavButton linkto="/about" buttontext="Learn more" />
         </div>
+        <StarSeparator />
 
-    )
-}
+        {/* Event Section */}
+        <div className="flex flex-col items-center px-4 md:px-8 lg:px-16 w-screen">
+          {/* Heading */}
+          <div className="text-center my-4 md:my-8">
+            <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-6">
+              Our Next Event
+            </p>
+          </div>
 
-function NextEventsSection() {
-    return (
-        <div className="text-center my-2 md:my-10 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80"> 
-            <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">Our Next Event</p>
-            <div className="mb-10">
-            <EventCard
-                id="1"
-                eventStartDateTime="2025-04-25T18:00:00"
-                eventEndDateTime="2025-04-25T20:00:00"
-                title="Dessert Festival 2025"
-                location="University of Auckland Quad"
-                description="Join us for a sweet evening of desserts, games, and music! Free samples from local dessert vendors."
-                imageSrc={post}
-                />
-                </div>
-            
-            <NavButton linkto="/events" buttontext="Discover Events" />
-            </div>
+            <EventCard {...firstEvent} />
 
-    )
-}
+          <div className="my-8 sm:my-14 md:my-20">
+            <NavButton linkto="/events" buttontext="Discover Events"/>
+          </div>
+        </div>
+        <StarSeparator />
 
-function SponsorSection() {
-    const sponsors1 = [theshelf, lanoissette, kompass, lapetit, thatsandoguy, tsujiri]
-    const sponsors2 = [yoguyogu, gongcha, giapo, teadee, copain, uncletetsus, fugitoto ]
-    return (
+        {/* Sponsors Section */}
         <div className="flex flex-col items-center mb-10">
-        <div className="text-center my-2 md:my-10 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80"> 
-            <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">2025 Sponsors</p>
-            
-            
-        </div>
-        <div className="relative overflow-hidden py-6">
-      <div
-        className="flex w-[200%] animate-scroll-x pause-on-hover"
-        style={{ '--marquee-speed': '40s' }}
-      >
-        {[...sponsors1, ...sponsors1].map((logo, index) => (
-          <img
-            key={index}
-            src={logo}
-            alt={`Sponsor ${index + 1}`}
-            className="h-20 w-auto mx-6 shrink-0"
-          />
-        ))}
-      </div>
-    </div>
-    <div className="relative overflow-hidden py-6 mb-10">
-      <div
-        className="flex w-[200%] animate-scroll-x pause-on-hover"
-        style={{ '--marquee-speed': '40s' }}
-      >
-        {[...sponsors2, ...sponsors2].map((logo, index) => (
-          <img
-            key={index}
-            src={logo}
-            alt={`Sponsor ${index + 1}`}
-            className="h-20 w-auto mx-6 shrink-0"
-          />
-        ))}
-      </div>
-    </div>
+          <div className="text-center my-2 md:my-10 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80"> 
+              <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">2025 Sponsors</p>   
+          </div>
+          <div className="relative overflow-hidden py-6">
+            <div
+              className="flex w-[200%] animate-scroll-x pause-on-hover"
+              style={{ '--marquee-speed': '40s' }}
+            >
+              {[...sponsors1, ...sponsors1].map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo}
+                  alt={`Sponsor ${index + 1}`}
+                  className="h-12 md:h-20 w-auto mx-6 shrink-0"
+                />
+              ))}
+            </div>
+          </div>
+          <div className="relative overflow-hidden py-6 mb-10">
+            <div
+              className="flex w-[200%] animate-scroll-x pause-on-hover"
+              style={{ '--marquee-speed': '40s' }}
+            >
+              {[...sponsors2, ...sponsors2].map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo}
+                  alt={`Sponsor ${index + 1}`}
+                  className="h-12 md:h-20 w-auto mx-6 shrink-0"
+                />
+              ))}
+            </div>
+          </div>
 
-        
-        <NavButton linkto="/sponsors" buttontext="Sponsorship Deals" />
-        </div>
+          
+          <NavButton linkto="/sponsors" buttontext="Sponsorship Deals" />
+          </div>
 
+        </div>
     )
+
 }
 
 
