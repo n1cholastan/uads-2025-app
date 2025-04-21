@@ -14,7 +14,7 @@ function Events() {
     return (
         <div className="mb-10">
             <div className="text-center my-8 mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80">
-                <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">Events</p>
+                <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">Our Events</p>
             </div>
 
             <div className="flex flex-col items-center gap-4 md:gap-8">
