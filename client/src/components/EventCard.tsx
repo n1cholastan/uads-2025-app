@@ -24,7 +24,7 @@ function hasPassed(eventDateTime: string): boolean {
     const formattedDateTime = `${datePart} · ${startTime} - ${endTime}`;
   
     return (
-      <div className={`w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 max-w-4xl aspect-[20/9] rounded-4xl p-2 flex gap-4 overflow-hidden font-body relative ${isPast
+      <div className={`w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 max-w-4xl aspect-[20/11] md:aspect-[20/9] rounded-4xl p-2 flex gap-4 overflow-hidden font-body relative ${isPast
           ? "bg-cream border-4 border-red text-brown"
           : "border-4 border-red bg-red text-cream"
         }`

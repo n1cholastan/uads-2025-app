@@ -5,7 +5,7 @@ import { SponsorCardProps } from "../utils/FrontendTypes";
   
   
     return (
-      <div className="w-11/12 sm:w-9/12 md:w-7/12 lg:w-10/12 xl:w-10/12 2xl:w-11/12 max-w-4xl aspect-[18/9] rounded-4xl p-2 flex gap-4 overflow-hidden font-body relative border-4 border-red bg-red text-cream">
+      <div className="w-11/12 sm:w-9/12 md:w-7/12 lg:w-10/12 xl:w-10/12 2xl:w-11/12 max-w-4xl aspect-[18/10] md:aspect-[18/9] rounded-4xl p-2 flex gap-4 overflow-hidden font-body relative border-4 border-red bg-red text-cream">
         {/* Left side image container */}
         <div className="relative w-1/3 aspect-square overflow-hidden p-2">
   <div className="w-full h-full relative rounded-3xl bg-white">
