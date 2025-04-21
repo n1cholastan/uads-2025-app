@@ -27,7 +27,8 @@ import uncletetsus from "../assets/sponsor images/uncle_tetsus.png";
 
 function Home() {
 
-  const firstEvent = mockEvents[0];
+  const upcomingEvents = mockEvents.filter(event => new Date(event.eventStartDateTime) > new Date());
+  const firstEvent = upcomingEvents[0];
   const sponsors1 = [theshelf, lanoissette, kompass, lapetit, thatsandoguy, tsujiri]
   const sponsors2 = [yoguyogu, gongcha, giapo, teadee, copain, uncletetsus, fugitoto ]
     return (
@@ -122,22 +123,25 @@ function Home() {
         </div>
         <StarSeparator />
 
-        {/* Event Section */}
-        <div className="flex flex-col items-center px-4 md:px-8 lg:px-16 w-screen">
-          {/* Heading */}
-          <div className="text-center my-4 md:my-8">
-            <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-6">
-              Our Next Event
-            </p>
-          </div>
+        {firstEvent && (
+          <>
+            {/* Event Section */}
+            <div className="flex flex-col items-center px-4 md:px-8 lg:px-16 w-screen">
+              <div className="text-center my-4 md:my-8">
+                <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-6">
+                  Our Next Event
+                </p>
+              </div>
 
-            <EventCard {...firstEvent} />
+              <EventCard {...firstEvent} />
 
-          <div className="my-8 sm:my-14 md:my-20">
-            <NavButton linkto="/events" buttontext="Discover Events"/>
-          </div>
-        </div>
-        <StarSeparator />
+              <div className="my-8 sm:my-14 md:my-20">
+                <NavButton linkto="/events" buttontext="Discover Events" />
+              </div>
+            </div>
+            <StarSeparator />
+          </>
+        )}
 
         {/* Sponsors Section */}
         <div className="flex flex-col items-center mb-20">
