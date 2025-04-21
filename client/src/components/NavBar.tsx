@@ -1,7 +1,6 @@
 import sal from "../assets/sal.png";
 import { NavLink } from "react-router";
 import { useState } from "react";
-import NavButton from "./NavButton";
 import '../utils/NavBar.css';
 
 function NavBar() {
@@ -67,7 +66,12 @@ function NavBar() {
                 About
               </NavLink>
             </div>
-            <NavButton linkto="/join" buttontext="Join Us" />
+            <a
+            href="https://forms.gle/QVSvcjKLBgk3BZkC8"
+            className= "px-5 sm:px-10 md:px-5 lg:px-10 py-3 rounded-full font-body font-bold sm:text-xl md:text-lg lg:text-xl xl:text-2xl w-fit transition-colors duration-300 ease-in-out bg-red text-cream hover:bg-brown"
+            >
+            Join Us
+            </a>
           </div>
         </div>
 
@@ -98,13 +102,13 @@ function NavBar() {
           >
             About
           </NavLink>
-          <NavLink 
-            to="/join" 
+          <a
+            href="https://forms.gle/QVSvcjKLBgk3BZkC8"
             className= "w-1/2 text-center sm:px-5 py-1 rounded-full font-body font-semibold transition-colors duration-300 ease-in-out bg-red text-cream hover:bg-brown" 
             onClick={() => setIsOpen(false)}
             >
             Join Us
-            </NavLink>
+            </a>
         </div>
       </div>
     </div>

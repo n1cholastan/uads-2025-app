@@ -6,7 +6,7 @@ import temp4 from "../assets/IMG_4160.png";
 import temp5 from "../assets/IMG_4010.png";
 import temp6 from "../assets/IMG_3932.png";
 import NavButton from "../components/NavButton";
-import star from "../assets/star.svg";
+import StarSeparator from "../components/StarSeparator";
 import post from "../assets/dessert crawl post.png";
 import EventCard from "../components/EventCard";
 import { SiLinktree, SiInstagram, SiTiktok, SiGmail, SiDiscord, SiFacebook } from "react-icons/si";
@@ -51,7 +51,12 @@ function StartingSection() {
                 <p className="text-3xl font-body font-semibold text-center text-brown">UNIVERSITY OF AUCKLAND DESSERT SOCIETY </p>
                 <p className="my-3  text-xl sm:text-2xl md:text-3xl font-body font-regular text-center text-brown">The largest student run society for dessert lovers in Aotearoa. </p>
                 <div className="mt-8">
-                    <NavButton linkto="/join" buttontext="Join UADS"></NavButton>
+                  <a
+                    href="https://forms.gle/QVSvcjKLBgk3BZkC8"
+                    className= "px-5 sm:px-10 md:px-5 lg:px-10 py-3 rounded-full font-body font-bold sm:text-xl md:text-lg lg:text-xl xl:text-2xl w-fit transition-colors duration-300 ease-in-out bg-red text-cream hover:bg-brown"
+                    >
+                    Join UADS
+                  </a>
                     
                     </div>
 
@@ -88,30 +93,30 @@ function ImageSection() {
         <div className="mx-3 md:mx-8 my-8 lg:mx-32 xl:mx-56 grid grid-cols-3 gap-2 sm:gap-4 p-4 bg-cream">
         {/* Column 1 */}
         <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4]">
+          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
             <img src={temp} alt="Dessert" className="w-full h-full object-cover" />
           </div>
-          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[4/3]">
+          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
             <img src={temp6} alt="Dessert Flatlay" className="w-full h-full object-cover" />
           </div>
         </div>
       
         {/* Column 2 */}
         <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[4/3]">
+          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
             <img src={temp2} alt="Bubble Tea" className="w-full h-full object-cover" />
           </div>
-          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4]">
+          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
             <img src={temp4} alt="Ice Cream" className="w-full h-full object-cover" />
           </div>
         </div>
       
         {/* Column 3 */}
         <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4]">
+          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
             <img src={temp5} alt="Dessert" className="w-full h-full object-cover" />
           </div>
-          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[4/3]">
+          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
             <img src={temp3} alt="Dessert Flatlay" className="w-full h-full object-cover" />
           </div>
         </div>
@@ -126,23 +131,15 @@ function AboutSection() {
             <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-8">What is UADS?</p>
             <p className="font-body text-brown text-base md:text-xl mb-6">
                 UADS is a student run club at the University of Auckland that aims to bring people together through our shared love of desserts. 
-                We are the go to student society for all things dessert!
+                For all things dessert, look no further than UADS!
                 </p>
                 <p className="font-body text-brown text-base md:text-xl mb-10 md:mb-12">
-                    At UADS we hold social events around dessert throughout the academic year, ranging from movie screenings, high teas and baking workshops! 
-                    We also like to discover, review and recommend dessert establishments in the city.
+                    At UADS, we hold social events based around dessert all throughout the academic year, with events ranging from movie screenings, high teas and baking workshops! 
+                    Along with our events, we also like to discover, review and recommend dessert establishments in the city.
                     </p>
             <NavButton linkto="/about" buttontext="Learn more" />
         </div>
 
-    )
-}
-
-function StarSeparator() {
-    return (
-        <div className="my-16 flex justify-center items-center">
-            <img src={star} className="w-16"></img>
-        </div>
     )
 }
 
