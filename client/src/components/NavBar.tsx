@@ -16,13 +16,13 @@ function NavBar() {
             <img
               src={sal}
               alt="Sal the snail"
-              className={`w-1/8 sm:w-1/10 md:w-1/3 lg:w-1/4 xl:w-1/4 2xl:w-2/3 m-1 xl:m-4 h-fit self-center transition-transform duration-500 ${
+              className={`w-[20%] sm:w-[15%] md:w-1/3 lg:w-1/4 xl:w-1/4 2xl:w-2/3 m-1 xl:m-4 h-auto self-center transition-transform duration-500 ${
                 isOpen ? 'rotate-360' : ''
               }`}
             />
             <NavLink
               to="/"
-              className="md:flex text-red font-title text-4xl sm:text-5xl md:text-4xl lg:text-5xl self-center h-fit transition-colors duration-300 ease-in-out hover:text-brown "
+              className="md:flex text-red font-title text-4xl Fsm:text-5xl md:text-4xl lg:text-5xl self-center h-fit transition-colors duration-300 ease-in-out hover:text-brown "
             >
               UADS
             </NavLink>
