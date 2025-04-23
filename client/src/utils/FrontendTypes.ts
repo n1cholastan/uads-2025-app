@@ -3,7 +3,7 @@ export interface NavButtonProps {
     buttontext: string;
   }
 
-export interface EventCardProps {
+export interface EventProps {
     id: string;
     eventStartDateTime: string; // in ISO format
     eventEndDateTime: string;
@@ -11,14 +11,23 @@ export interface EventCardProps {
     location: string;
     description: string;
     imageSrc: string;
+    form: string;
+    week: string;
   }
 
-  export interface SponsorCardProps {
-    id: string;
-    name: string;
-    location: string;
-    isDeal: boolean;
-    deal: string;
-    imageSrc: string;
-    link: string;
-  }
+export interface SponsorProps {
+  id: string;
+  name: string;
+  location: string;
+  isDeal: boolean;
+  deal: string;
+  imageSrc: string;
+  link: string;
+}
+
+export interface ExecProps {
+  id: string;
+  name: string;
+  imageSrc: string;
+  team: string;
+}
