@@ -1,19 +1,19 @@
 export interface NavButtonProps {
-    linkto: string;
-    buttontext: string;
-  }
+  linkto: string;
+  buttontext: string;
+}
 
 export interface EventProps {
-    id: string;
-    eventStartDateTime: string; // in ISO format
-    eventEndDateTime: string;
-    title: string;
-    location: string;
-    description: string;
-    imageSrc: string;
-    form: string;
-    week: string;
-  }
+  id: string;
+  eventStartDateTime: string; // in ISO format
+  eventEndDateTime: string; // in ISO format
+  title: string;
+  location: string;
+  description: string;
+  imageSrc: string;
+  form: string;
+  week: string;
+}
 
 export interface SponsorProps {
   id: string;
