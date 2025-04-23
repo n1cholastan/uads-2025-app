@@ -6,12 +6,12 @@ import execRoutes from './execRoutes';
 const router = express.Router();
 
 // All event routes
-router.use('/api/events', eventRoutes);
+router.use('/events', eventRoutes);
 
 // All sponsor routes
-router.use('/api/sponsors', sponsorRoutes);
+router.use('/sponsors', sponsorRoutes);
 
 // All exec routes
-router.use('/api/execs', execRoutes);
+router.use('/execs', execRoutes);
 
 export default router;

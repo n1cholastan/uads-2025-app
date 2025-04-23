@@ -64,7 +64,7 @@ export const getEvents = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-export const getEventById = async (req: Request, res: Response) => {
+export const getEventById = async (req: Request, res: Response): Promise<any> => {
   const { id } = req.params;
   try {
     const response = await notion.databases.query({
@@ -97,7 +97,8 @@ export const getEventById = async (req: Request, res: Response) => {
     const event = events.find((e) => e.id === id);
 
     if (!event) {
-      return res.status(404).json({ error: 'Event not found' });
+      res.status(404).json({ error: 'Event not found' });
+      return;
     }
 
     res.json(event);

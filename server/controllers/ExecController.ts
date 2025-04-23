@@ -18,7 +18,7 @@ export const getExecs = async (req: Request, res: Response): Promise<void> => {
       sorts: [
         {
           property: 'Order',
-          direction: 'ascending',
+          direction: 'descending',
         },
       ],
     });
