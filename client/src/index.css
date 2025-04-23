@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-red: oklch(0.48 0.1563 24.46);
@@ -6,15 +6,15 @@
   --color-brown: oklch(0.36 0.0832 51.78);
   --color-yellow: oklch(0.76 0.1433 68.19);
   --color-gray: oklch(0.92 0.0307 61.1);
-  --font-inter: "Inter", "sans-serif";
-  --font-title: "Shrikhand", "serif";
-  --font-body: "Arvo", "serif";
-
+  --font-inter: 'Inter', 'sans-serif';
+  --font-title: 'Shrikhand', 'serif';
+  --font-body: 'Arvo', 'serif';
 }
 
 @layer utilities {
   @keyframes sway {
-    0%, 100% {
+    0%,
+    100% {
       transform: rotate(-3deg);
     }
     50% {
@@ -39,7 +39,6 @@
     -webkit-box-orient: vertical;
   }
 
-
   @keyframes scroll-x {
     0% {
       transform: translateX(0%);
@@ -57,4 +56,3 @@
     animation-play-state: paused;
   }
 }
-
