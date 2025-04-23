@@ -196,10 +196,8 @@ function Home() {
         <div className="relative overflow-hidden py-6">
           <div
             className="flex animate-scroll-x pause-on-hover"
-            style={{
-              '--marquee-speed': '40s',
-              width: '100vw', // Ensure it doesn't overflow
-            }}
+            style={{ '--marquee-speed': '40s', width: '100vw', } as React.CSSProperties}
+
           >
             {[...sponsorsFirstHalf, ...sponsorsFirstHalf]
               .filter((sponsor) => sponsor.name !== 'No Sponsor Found')
@@ -222,10 +220,8 @@ function Home() {
         <div className="relative overflow-hidden py-6 mb-10">
           <div
             className="flex animate-scroll-x pause-on-hover"
-            style={{
-              '--marquee-speed': '40s',
-              width: '100vw', // Same adjustment here
-            }}
+            style={{ '--marquee-speed': '40s', width: '100vw', } as React.CSSProperties}
+
           >
             {[...sponsorsSecondHalf, ...sponsorsSecondHalf]
               .filter((sponsor) => sponsor.name !== 'No Sponsor Found')
