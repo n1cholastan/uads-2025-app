@@ -110,7 +110,7 @@ function Home() {
       </div>
 
       {/*Images*/}
-      <div className="mx-3 md:mx-8 my-8 lg:mx-32 xl:mx-56 grid grid-cols-3 gap-2 sm:gap-4 p-4 bg-cream">
+      <div className="mx-3 md:mx-8 my-8 lg:mx-32 xl:mx-56 2xl:mx-72 grid grid-cols-3 gap-2 sm:gap-4 p-4 bg-cream">
         {/* Column 1 */}
         <div className="flex flex-col gap-2 sm:gap-4">
           <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[4/3]">
