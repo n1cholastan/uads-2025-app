@@ -17,7 +17,7 @@ function NavBar() {
               src={sal}
               alt="Sal the snail"
               className={`w-[16%] sm:w-[15%] md:w-1/3 lg:w-1/4 xl:w-1/4 m-1 xl:m-4 h-auto self-center transition-transform duration-500 ${
-                isOpen ? 'rotate-360' : ''
+                isOpen ? 'rotate-[360deg]' : ''
               }`}
             />
             <NavLink
