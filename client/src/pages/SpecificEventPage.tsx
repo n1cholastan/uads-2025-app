@@ -79,7 +79,7 @@ function SpecificEventPage() {
         <NavButton linkto="/events" buttontext="Go Back" />
       </div>
       <div
-        className={`:mx-8 mb-8 p-6 md:p-8 xl:p-10 rounded-3xl w-11/12 lg:w-3/4 flex flex-col self-center font-body ${
+        className={`:mx-8 mb-8 p-6 md:p-8 xl:p-10 rounded-3xl w-11/12 lg:w-3/4 xl:w-1/2 flex flex-col self-center font-body ${
           isPast
             ? 'bg-cream border-4 border-red text-brown'
             : 'border-4 border-red bg-red text-cream'
@@ -91,7 +91,17 @@ function SpecificEventPage() {
         </p>
         <h1 className="text-xl md:text-3xl font-bold mb-2">{event.title}</h1>
         <p className="text-sm md:text-base mb-4">{event.location}</p>
-        <p className="text-sm md:text-base text-left leading-relaxed">{event.description}</p>
+        <p className="text-sm md:text-base text-left leading-relaxed mb-4 whitespace-pre-line ">{event.description}</p>
+        {event.instagram && (
+          <a 
+            href={event.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm md:text-base text-left leading-relaxed underline hover:text-red visited:text-red transition-all duration-100"
+          >
+            Link to instagram post
+          </a>
+        )}
         {event.form && !isPast && (
           <div className="my-8 flex flex-col justify-center items-center">
             <a

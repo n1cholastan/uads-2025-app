@@ -8,6 +8,7 @@ export type EventStructured = {
   imageSrc: string;
   form: string;
   week: string;
+  instagram: string;
 };
 
 export type SponsorStructured = {

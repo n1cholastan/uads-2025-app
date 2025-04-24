@@ -21,12 +21,19 @@ export const getEvents = async (req: Request, res: Response): Promise<void> => {
       const title = page.properties.Title.title[0]?.text?.content || 'Title TBD';
       const location =
         page.properties.Location.rich_text[0]?.text?.content || 'Location to be confirmed';
-      const description = page.properties.Description.rich_text[0]?.text?.content || 'Coming Soon';
-      const imageSrc = page.properties.Image.files[0]?.file?.url || '';
+      const descriptionRaw = page.properties.Description.rich_text || [];
+      const descriptionText = descriptionRaw.map((block: any) => block.plain_text).join('\n');
+      const description = descriptionText || "Description coming soon.";
+      const imageSrc =
+        page.properties.Image.files?.[0]?.file?.url ||
+        page.properties.Image.files?.[0]?.external?.url ||
+        '';
       const eventStartDateTime = page.properties.Date.date?.start || '';
       const eventEndDateTime = page.properties.Date.date?.end || '';
       const form = page.properties.Form.url || '';
       const week = page.properties.Week.rich_text[0]?.text?.content || 'Date TBD';
+      const instagram = page.properties.Instagram.url || '';
+      
       return {
         id: page.id,
         title,
@@ -37,6 +44,7 @@ export const getEvents = async (req: Request, res: Response): Promise<void> => {
         eventEndDateTime,
         form,
         week,
+        instagram,
       };
     });
 
@@ -80,6 +88,7 @@ export const getEventById = async (req: Request, res: Response): Promise<any> =>
       const eventStartDateTime = page.properties.Date.date?.start || '';
       const eventEndDateTime = page.properties.Date.date?.end || '';
       const form = page.properties.Form.url || '';
+      const instagram = page.properties.Instagram.url || '';
       const week = page.properties.Week.rich_text[0]?.text?.content || 'Date TBD';
       return {
         id: page.id,
@@ -91,6 +100,7 @@ export const getEventById = async (req: Request, res: Response): Promise<any> =>
         eventEndDateTime,
         form,
         week,
+        instagram,
       };
     });
 

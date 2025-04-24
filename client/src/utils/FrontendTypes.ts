@@ -13,6 +13,7 @@ export interface EventProps {
   imageSrc: string;
   form: string;
   week: string;
+  instagram: string;
 }
 
 export interface SponsorProps {

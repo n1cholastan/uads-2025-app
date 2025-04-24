@@ -67,7 +67,7 @@ function EventCard(props: EventProps) {
           <p className="text-sm sm:text-md md:-text-lg 2xl:text-xl font-semibold opacity-90 mb-2">
             {location}
           </p>
-          <p className="text-xs sm:text-base md:text-lg opacity-90 line-clamp-2 sm:line-clamp-3">
+          <p className="text-xs sm:text-base md:text-lg opacity-90 line-clamp-2 lg:line-clamp-3 whitespace-pre-line">
             {isPast && <span className="font-semibold text-red block">Event Passed</span>}
             {description}
           </p>
