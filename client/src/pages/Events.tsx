@@ -16,7 +16,7 @@ function Events() {
   const displayedEvents = events.slice(0, visibleEvents);
 
   useEffect(() => {
-    fetch('/api/events')
+    fetch(`${import.meta.env.VITE_API_URL}/events`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();

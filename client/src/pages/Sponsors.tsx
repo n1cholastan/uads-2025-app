@@ -9,7 +9,7 @@ function Sponsors() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/sponsors')
+    fetch(`${import.meta.env.VITE_API_URL}/sponsors`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();

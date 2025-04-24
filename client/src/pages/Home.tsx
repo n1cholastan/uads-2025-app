@@ -21,7 +21,7 @@ function Home() {
   const firstEvent = upcomingEvents[0];
 
   useEffect(() => {
-    fetch('/api/events', { cache: 'no-store' })
+    fetch(`${import.meta.env.VITE_API_URL}/events`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
@@ -34,7 +34,7 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    fetch('/api/sponsors', { cache: 'no-store' })
+    fetch(`${import.meta.env.VITE_API_URL}/sponsors`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();

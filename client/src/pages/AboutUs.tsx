@@ -8,7 +8,7 @@ function AboutUs() {
   const [execs, setExecs] = useState<ExecProps[]>([]);
 
   useEffect(() => {
-    fetch('/api/execs')
+    fetch(`${import.meta.env.VITE_API_URL}/execs`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();

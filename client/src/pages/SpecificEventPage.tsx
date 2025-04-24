@@ -17,7 +17,7 @@ function SpecificEventPage() {
   useEffect(() => {
     if (!eventId) return;
 
-    fetch(`/api/events/${eventId}`)
+    fetch(`${import.meta.env.VITE_API_URL}/events/${eventId}`)
       .then((res) => {
         console.log('eventId', eventId);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
