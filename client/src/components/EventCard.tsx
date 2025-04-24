@@ -27,7 +27,7 @@ function EventCard(props: EventProps) {
 
   return (
     <div
-      className={`w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 max-w-4xl aspect-[20/13] sm:aspect-[20/9] rounded-4xl p-1 sm:p-2 flex gap-2 sm:gap-4 overflow-hidden font-body relative ${
+      className={`w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12 max-w-4xl aspect-[20/13] sm:aspect-[20/9] rounded-3xl p-1 sm:p-2 flex gap-2 sm:gap-4 overflow-hidden font-body relative ${
         isPast
           ? 'bg-cream border-2 md:border-4 border-red text-brown'
           : 'border-2 md:border-4 border-red bg-red text-cream'

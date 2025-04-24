@@ -39,14 +39,14 @@ function AboutUs() {
           </p>
         </div>
         <div className="self-center mx-8 sm:mx-0">
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
+          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4]">
             <img src={sal_cookie} alt="Sal as a cookie" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
 
       <div className="mx-3 md:mx-8 mt-2 mb-8 sm:mb-12 md:mb-18 lg:mx-24 xl:mx-48 2xl:mx-80 grid grid-cols-1 sm:grid-cols-2 gap-6  sm:gap-8 lg:gap-20 p-4 bg-cream">
-        <div className="hidden sm:block overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4] self-center">
+        <div className="hidden sm:block overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4] self-center">
           <img src={croffle} alt="Croffles!" className="w-full h-full object-cover" />
         </div>
 
@@ -82,7 +82,7 @@ function AboutUs() {
           newsletter!
         </p>
         <div className="mx-8 sm:mx-32 md:mx-44 lg:mx-64 xl:mx-40 2xl:mx-64 my-10">
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
+          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4]">
             <img src={signuppic} alt="Sign Up!" className="w-full h-full object-cover" />
           </div>
         </div>

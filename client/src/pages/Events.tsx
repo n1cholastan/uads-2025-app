@@ -16,7 +16,7 @@ function Events() {
   const displayedEvents = events.slice(0, visibleEvents);
 
   useEffect(() => {
-    fetch('/api/events', { cache: 'no-store' })
+    fetch('/api/events')
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();

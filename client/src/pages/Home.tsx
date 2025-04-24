@@ -8,7 +8,7 @@ import croquembouche from '../assets/croquembouche.png';
 import NavButton from '../components/NavButton';
 import StarSeparator from '../components/StarSeparator';
 import EventCard from '../components/EventCard';
-import { SiLinktree, SiInstagram, SiTiktok, SiGmail, SiDiscord, SiFacebook } from 'react-icons/si';
+import { SiLinktree, SiInstagram, SiTiktok, SiGmail, SiDiscord} from 'react-icons/si';
 import { useState, useEffect } from 'react';
 import { SponsorProps } from '../utils/FrontendTypes';
 import { EventProps } from '../utils/FrontendTypes';
@@ -73,13 +73,8 @@ function Home() {
             </a>
           </div>
 
-          <div className="mt-10 flex flex-row w-fit self-center items-center gap-3 sm:gap-6 md:gap-10">
-            <a
-              href="https://www.facebook.com/uoadessertsociety"
-              className="bg-red rounded-full w-10 h-10 flex items-center justify-center hover:bg-brown transition-colors duration-300 ease-in-out"
-            >
-              <SiFacebook className="w-6 h-6  fill-cream" />
-            </a>
+          <div className="mt-10 flex flex-row w-fit self-center items-center gap-3 sm:gap-6 md:gap-8">
+            
             <a
               href="https://linktr.ee/dessertsociety"
               className="bg-red rounded-full w-10 h-10 flex items-center justify-center hover:bg-brown transition-colors duration-300 ease-in-out"
@@ -118,36 +113,32 @@ function Home() {
       <div className="mx-3 md:mx-8 my-8 lg:mx-32 xl:mx-56 grid grid-cols-3 gap-2 sm:gap-4 p-4 bg-cream">
         {/* Column 1 */}
         <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
-            <img src={cafehopping} alt="High Tea Desserts" className="w-full h-full object-cover" />
+          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[4/3]">
+            <img src={acai} alt="Acai" className="w-full h-full object-cover"/>
           </div>
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
-            <img
-              src={kumi}
-              alt="Brown Sugar Bingsu and Matcha Souffle"
-              className="w-full h-full object-cover"
-            />
+          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4]">
+            <img src={icecream} alt="Ice cream" className="w-full h-full object-cover" />
           </div>
         </div>
 
         {/* Column 2 */}
         <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
-            <img src={acai} alt="Acai Bowls" className="w-full h-full object-cover" />
+          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4]">
+            <img src={cafehopping} alt="High Tea Desserts" className="w-full h-full object-cover" />
           </div>
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
-            <img src={icecream} alt="Ice Cream" className="w-full h-full object-cover" />
+          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[4/3]">
+            <img src={croquembouche} alt="Croquembouche" className="w-full h-full object-cover" />
           </div>
         </div>
 
         {/* Column 3 */}
         <div className="flex flex-col gap-2 sm:gap-4">
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[3/4]">
+          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[4/3]">
+            <img src={kumi} alt="Boba bingsu and matcha souffle" className="w-full h-full object-cover" />
+          </div>
+          <div className="overflow-hidden rounded-xl md:rounded-3xl aspect-[3/4]">
             <img src={cookies} alt="Decorated Cookies" className="w-full h-full object-cover" />
-          </div>
-          <div className="overflow-hidden rounded-xl md:rounded-4xl aspect-[4/3]">
-            <img src={croquembouche} alt="Croquembouche" className="w-full h-full object-cover" />
-          </div>
+          </div>  
         </div>
       </div>
 

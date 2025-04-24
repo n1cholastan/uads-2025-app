@@ -4,7 +4,7 @@ function SponsorCard(props: SponsorProps) {
   const { name, location, deal, link, imageSrc } = props;
 
   return (
-    <div className="w-11/12 sm:w-9/12 md:w-7/12 lg:w-10/12 xl:w-10/12 2xl:w-11/12 max-w-4xl aspect-[18/10] md:aspect-[18/9] rounded-4xl p-1 sm:p-2 flex gap-2 sm:gap-4 overflow-hidden font-body relative border-4 border-red bg-red text-cream">
+    <div className="w-11/12 sm:w-9/12 md:w-7/12 lg:w-10/12 xl:w-10/12 2xl:w-11/12 max-w-4xl aspect-[18/10] md:aspect-[18/9] rounded-3xl p-1 sm:p-2 flex gap-2 sm:gap-4 overflow-hidden font-body relative border-4 border-red bg-red text-cream">
       {/* Left side */}
       <div className="relative w-5/12 md:w-1/3 aspect-square overflow-hidden p-2">
         {imageSrc ? (

@@ -45,7 +45,7 @@ function SpecificEventPage() {
   if (!event)
     return (
       <div className="flex flex-col justify-center mt-6">
-        <div className="mx-8 mb-8 p-6 xl:p-10 rounded-4xl w-11/12 md:w-9/12 lg:w-3/4 flex flex-col self-center font-body text-red bg-cream border-red border-2 md:border-4">
+        <div className="mx-8 mb-8 p-6 xl:p-10 rounded-3xl w-11/12 md:w-9/12 lg:w-3/4 flex flex-col self-center font-body text-red bg-cream border-red border-2 md:border-4">
           <h1 className="text-xl md:text-3xl font-bold text-center">Sorry, Event Not Found</h1>
         </div>
 
@@ -79,7 +79,7 @@ function SpecificEventPage() {
         <NavButton linkto="/events" buttontext="Go Back" />
       </div>
       <div
-        className={`:mx-8 mb-8 p-6 md:p-8 xl:p-10 rounded-4xl w-11/12 lg:w-3/4 flex flex-col self-center font-body ${
+        className={`:mx-8 mb-8 p-6 md:p-8 xl:p-10 rounded-3xl w-11/12 lg:w-3/4 flex flex-col self-center font-body ${
           isPast
             ? 'bg-cream border-4 border-red text-brown'
             : 'border-4 border-red bg-red text-cream'

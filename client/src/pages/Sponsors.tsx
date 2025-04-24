@@ -9,7 +9,7 @@ function Sponsors() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/sponsors', { cache: 'no-store' })
+    fetch('/api/sponsors')
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
@@ -83,7 +83,7 @@ function Sponsors() {
             placeholder="Search sponsors..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full max-w-md px-4 py-2 border-2 border-red rounded-full focus:outline-none focus:ring-2 focus:ring-red text-red placeholder-red font-body"
+            className="w-full max-w-md px-4 py-2 border-2 border-red rounded-full focus:outline-none focus:ring-2 focus:ring-red text-red placeholder-red font-body bg-cream"
           />
         </div>
 

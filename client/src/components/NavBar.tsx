@@ -9,14 +9,14 @@ function NavBar() {
   return (
     <div className="sticky top-0 z-50 w-screen">
       <div
-        className={`navbar-container bg-cream my-3 mx-8 md:my-4 md:mx-4 p-2 rounded-4xl md:rounded-full border-red border-2 md:border-4 ${isOpen ? 'open' : ''}`}
+        className={`navbar-container bg-cream my-3 mx-8 md:my-4 md:mx-4 p-2 rounded-3xl md:rounded-full border-red border-2 md:border-4 ${isOpen ? 'open' : ''}`}
       >
         <div className="flex flex-row items-center justify-between h-12 sm:h-16 md:h-20">
           <div className="sm:w-screen md:w-1/4 lg:w-1/3 xl:w-1/5 2xl:w-1/6 flex flex-row pl-2 justify-between md:justify-start items-center">
             <img
               src={sal}
               alt="Sal the snail"
-              className={`w-[16%] sm:w-[15%] md:w-1/3 lg:w-1/4 xl:w-1/4 2xl:w-2/3 m-1 xl:m-4 h-auto self-center transition-transform duration-500 ${
+              className={`w-[16%] sm:w-[15%] md:w-1/3 lg:w-1/4 xl:w-1/4 m-1 xl:m-4 h-auto self-center transition-transform duration-500 ${
                 isOpen ? 'rotate-360' : ''
               }`}
             />
@@ -32,7 +32,7 @@ function NavBar() {
                 className="relative cursor-pointer sm:px-5 py-3 rounded-full font-body font-bold w-fit min-w-[90px] text-center transition-colors duration-300 ease-in-out bg-red text-cream hover:bg-brown"
               >
                 <span className="invisible">Close</span>
-                <span className="absolute inset-0 flex items-center justify-center">
+                <span className="absolute inset-0 flex items-center justify-center text-cream">
                   {isOpen ? 'Close' : 'Menu'}
                 </span>
               </p>
