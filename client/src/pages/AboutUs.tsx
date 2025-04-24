@@ -1,6 +1,6 @@
 import croffle from '../assets/croffle.jpeg';
 import sal_cookie from '../assets/sal cookie.jpeg';
-import signuppic from '../assets/signuppic.jpg';
+import signuppic from '../assets/signuppic.jpeg'
 import StarSeparator from '../components/StarSeparator';
 import { useState, useEffect } from 'react';
 import { ExecProps } from '../utils/FrontendTypes';
