@@ -162,7 +162,7 @@ function Home() {
       {firstEvent && (
         <>
           {/* Event Section */}
-          <div className="flex flex-col items-center px-4 md:px-8 lg:px-16 w-screen">
+          <div className="flex flex-col items-center mx-8 sm:mx-16 md:mx-20 lg:mx-32 xl:mx-80 w-screen">
             <div className="text-center my-4 md:my-8">
               <p className="font-title text-red text-4xl md:text-5xl lg:text-6xl mb-6">
                 Our Next Event

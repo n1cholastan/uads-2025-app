@@ -56,12 +56,12 @@ function EventCard(props: EventProps) {
       </div>
 
       {/* Right side content */}
-      <div className="w-2/3 flex flex-col items-start justify-between py-2 pr-4 md:pr-2 relative">
+      <div className="w-2/3 flex flex-col items-start justify-between py-2 pr-3 md:pr-2 relative">
         <div>
           <p className="text-xs sm:text-sm md:text-base 2xl:text-lg font-medium opacity-90">
             {formattedDateTime}
           </p>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight">
+          <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight">
             {title}
           </h2>
           <p className="text-sm sm:text-md md:-text-lg 2xl:text-xl font-semibold opacity-90 mb-2">
