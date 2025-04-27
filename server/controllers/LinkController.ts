@@ -39,6 +39,6 @@ export const getLinks = async (req: Request, res: Response): Promise<void> => {
     res.status(200).json(links);
   } catch (error) {
     console.error('Error fetching links:', error);
-    res.status(500).json({ message: 'Failed to fetch execs ' });
+    res.status(500).json({ message: 'Failed to fetch links ' });
   }
 };
