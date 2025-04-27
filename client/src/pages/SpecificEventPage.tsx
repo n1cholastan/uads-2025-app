@@ -103,23 +103,25 @@ function SpecificEventPage() {
           </a>
         )}
         {event.form && !isPast && (
-          <div className="my-8 flex flex-col justify-center items-center">
+          <div className={`${event.embed ? 'my-8' : 'mt-8'} flex flex-col justify-center items-center`}>
             <a
               href={event.form}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm px-3 py-1 mb-4 md:px-5 md:py-2 md:text-base xl:text-lg rounded-full font-bold  transition-all duration-300 border-1 bg-cream opacity-100 text-red hover:opacity-90"
+              className="text-sm px-3 py-1 mb-4 md:px-5 md:py-2 md:text-base xl:text-lg rounded-full font-bold transition-all duration-300 border-1 bg-cream opacity-100 text-red hover:opacity-90"
             >
               Go To Form
             </a>
-            <iframe
-              src={event.form}
-              width="100%"
-              height="800"
-              className="w-full md:w-3/4 rounded-2xl"
-            >
-              Loading…
-            </iframe>
+            {event.embed && (
+              <iframe
+                src={event.form}
+                width="100%"
+                height="800"
+                className="w-full md:w-3/4 rounded-2xl"
+              >
+                Loading…
+              </iframe>
+            )}
           </div>
         )}
       </div>

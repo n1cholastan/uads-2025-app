@@ -33,6 +33,7 @@ export const getEvents = async (req: Request, res: Response): Promise<void> => {
       const form = page.properties.Form.url || '';
       const week = page.properties.Week.rich_text[0]?.text?.content || 'Date TBD';
       const instagram = page.properties.Instagram.url || '';
+      const embed = page.properties?.Embed?.checkbox ?? false;
       
       return {
         id: page.id,
@@ -45,6 +46,7 @@ export const getEvents = async (req: Request, res: Response): Promise<void> => {
         form,
         week,
         instagram,
+        embed,
       };
     });
 
@@ -90,6 +92,7 @@ export const getEventById = async (req: Request, res: Response): Promise<any> =>
       const form = page.properties.Form.url || '';
       const instagram = page.properties.Instagram.url || '';
       const week = page.properties.Week.rich_text[0]?.text?.content || 'Date TBD';
+      const embed = page.properties?.Embed?.checkbox ?? false;
       return {
         id: page.id,
         title,
@@ -101,6 +104,7 @@ export const getEventById = async (req: Request, res: Response): Promise<any> =>
         form,
         week,
         instagram,
+        embed,
       };
     });
 

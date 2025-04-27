@@ -14,6 +14,7 @@ export interface EventProps {
   form: string;
   week: string;
   instagram: string;
+  embed: boolean;
 }
 
 export interface SponsorProps {
