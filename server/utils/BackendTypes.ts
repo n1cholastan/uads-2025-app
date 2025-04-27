@@ -27,3 +27,10 @@ export type ExecStructured = {
   imageSrc: string;
   team: string;
 };
+
+export type LinksStructured = {
+  id: string;
+  text: string;
+  show: boolean;
+  link: string;
+};
