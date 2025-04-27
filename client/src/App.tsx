@@ -17,11 +17,12 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/*" element={<Home />} />
           <Route path="/events/:eventId" element={<SpecificEventPage />} />
           <Route path="/events" element={<Events />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/about" element={<AboutUs />} />
+          
+          <Route path="/*" element={<Home />} />
         </Routes>
         <Footer />
       </div>
