@@ -117,7 +117,7 @@ function SpecificEventPage() {
                 src={event.form}
                 width="100%"
                 height="800"
-                className="w-full md:w-3/4 rounded-2xl"
+                className="w-full rounded-2xl"
               >
                 Loading…
               </iframe>
