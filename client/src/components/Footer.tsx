@@ -36,7 +36,7 @@ function Footer() {
         <a href="https://www.facebook.com/uoadessertsociety">
           <SiFacebook className="w-6 h-6 hover:opacity-80 transition-all duration-300 ease-in-out" />
         </a>
-        <a href="https://linktr.ee/dessertsociety">
+        <a href="https://go.uads.co.nz">
           <SiLinktree className="w-6 h-6 hover:opacity-80 transition-all duration-300 ease-in-out" />
         </a>
         <a href="https://www.tiktok.com/@uoadessertsociety">

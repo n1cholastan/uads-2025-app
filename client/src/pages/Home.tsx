@@ -76,7 +76,7 @@ function Home() {
           <div className="mt-10 flex flex-row w-fit self-center items-center gap-3 sm:gap-6 md:gap-8">
             
             <a
-              href="https://linktr.ee/dessertsociety"
+              href="https://go.uads.co.nz"
               className="bg-red rounded-full w-10 h-10 flex items-center justify-center hover:bg-brown transition-colors duration-300 ease-in-out"
             >
               <SiLinktree className="w-6 h-6  fill-cream" />
